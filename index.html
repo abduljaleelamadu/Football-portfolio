@@ -1,1 +1,69 @@
 components/Hero.tsx
+"use client";
+
+export default function Hero() {
+  return (
+    <section
+      id="home"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-black"
+    >
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-black/50"></div>
+
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-20"
+        style={{
+          backgroundImage: "url('/images/hero.jpg')",
+        }}
+      />
+
+      {/* Main Content */}
+      <div className="relative z-10 max-w-4xl px-6 text-center">
+
+        <p className="mb-4 text-blue-400 text-lg uppercase tracking-[6px]">
+          Football Portfolio
+        </p>
+
+        <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight">
+          Abdul Jaleel Amadu
+        </h1>
+
+        <h2 className="mt-6 text-2xl md:text-3xl text-gray-300">
+          Defensive Midfielder • Attacking Midfielder • Right Winger
+        </h2>
+
+        <p className="mt-8 text-lg text-gray-400 leading-8 max-w-2xl mx-auto">
+          Every dream begins with one step. My journey started with a football
+          in my community, and today I continue to chase my dream of becoming a
+          professional footballer through discipline, hard work and belief.
+        </p>
+
+        {/* Buttons */}
+        <div className="mt-10 flex flex-col md:flex-row justify-center gap-5">
+
+          <a
+            href="#story"
+            className="rounded-full bg-blue-600 px-8 py-4 text-lg font-semibold transition hover:bg-blue-700"
+          >
+            Watch My Journey
+          </a>
+
+          <a
+            href="#career"
+            className="rounded-full border border-white px-8 py-4 text-lg font-semibold transition hover:bg-white hover:text-black"
+          >
+            Football Career
+          </a>
+
+        </div>
+
+        {/* Scroll Down */}
+        <div className="mt-20 animate-bounce text-gray-400 text-3xl">
+          ↓
+        </div>
+
+      </div>
+    </section>
+  );
+}
